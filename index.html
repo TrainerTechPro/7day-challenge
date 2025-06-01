@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>7-Day Athlete Mindset Tune-Up Challenge | Nexus Performance AI</title>
+    <title>7-Day Athlete Mindset Tune-Up with Tony Sommers | Transform Your Athletes' Mental Game</title>
     <style>
         * {
             margin: 0;
@@ -12,33 +12,22 @@
         }
 
         :root {
-            --primary: #1a1a2e;
-            --secondary: #16213e;
-            --accent: #0f3460;
-            --highlight: #e94560;
-            --text-light: #f5f5f5;
-            --text-dark: #333;
-            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --primary: #0066ff;
+            --primary-dark: #0052cc;
+            --text-dark: #0a0a0a;
+            --text-light: #666;
+            --bg-light: #fafafa;
+            --white: #fff;
+            --accent: #ff3366;
+            --gradient: linear-gradient(135deg, #0066ff 0%, #0052cc 100%);
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: var(--text-dark);
+            background: var(--bg-light);
             overflow-x: hidden;
-        }
-
-        /* Header Section */
-        .hero {
-            background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.9)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%230099ff" fill-opacity="0.1" d="M0,128L48,138.7C96,149,192,171,288,165.3C384,160,480,128,576,128C672,128,768,160,864,181.3C960,203,1056,213,1152,197.3C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
-            background-size: cover;
-            color: var(--text-light);
-            padding: 60px 20px;
-            text-align: center;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .container {
@@ -47,530 +36,43 @@
             padding: 0 20px;
         }
 
-        h1 {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 800;
-            margin-bottom: 20px;
-            line-height: 1.2;
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        h2 {
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
-            margin-bottom: 30px;
-            color: var(--primary);
-            text-align: center;
-        }
-
-        .subheadline {
-            font-size: clamp(1.1rem, 2vw, 1.4rem);
-            margin-bottom: 40px;
-            opacity: 0.9;
-            animation: fadeInUp 0.8s ease-out 0.2s both;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 18px 40px;
-            background: var(--highlight);
-            color: white;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: 700;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(233, 69, 96, 0.3);
-            animation: fadeInUp 0.8s ease-out 0.4s both;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 25px rgba(233, 69, 96, 0.4);
-            background: #ff3856;
-        }
-
-        .countdown {
-            margin: 30px 0;
-            font-size: 1.1rem;
-            animation: fadeInUp 0.8s ease-out 0.6s both;
-        }
-
-        .countdown-timer {
-            display: inline-flex;
-            gap: 20px;
-            margin-top: 10px;
-        }
-
-        .time-unit {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 10px 15px;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-        }
-
-        .time-unit span {
-            display: block;
-            font-size: 1.8rem;
-            font-weight: bold;
-        }
-
-        .time-unit small {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            opacity: 0.8;
-        }
-
-        /* Section Styles */
-        .section {
-            padding: 80px 0;
-            animation: fadeIn 0.8s ease-out;
-        }
-
-        .section:nth-child(even) {
-            background: #f8f9fa;
-        }
-
-        .problem-section {
-            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
-            color: #1a1a1a;
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
             position: relative;
+            background: var(--white);
             overflow: hidden;
         }
 
-        .problem-section::before {
+        .hero::before {
             content: '';
             position: absolute;
             top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(233, 69, 96, 0.05) 0%, transparent 70%);
-            animation: pulse 4s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.1); opacity: 0.8; }
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(5px); }
-        }
-
-        .problem-section h2 {
-            color: #1a1a1a;
-            font-size: clamp(1.8rem, 4vw, 2.8rem);
-            margin-bottom: 40px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .problem-section h2::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: var(--highlight);
-            margin: 20px auto 0;
-        }
-
-        .problem-intro {
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-            margin-bottom: 40px;
-            position: relative;
-            z-index: 1;
-            border-left: 5px solid var(--highlight);
-        }
-
-        .problem-section p {
-            color: #333;
-            position: relative;
-            z-index: 1;
-        }
-
-        .stats-comparison {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-        }
-
-        .athlete-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            text-align: center;
-            min-width: 200px;
-            position: relative;
-            transition: transform 0.3s ease;
-        }
-
-        .athlete-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-        }
-
-        .athlete-card h4 {
-            color: var(--primary);
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-        }
-
-        .athlete-card .stats {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
-
-        .athlete-card .outcome {
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        .athlete-card.winner .outcome {
-            color: #10b981;
-        }
-
-        .athlete-card.loser .outcome {
-            color: #ef4444;
-        }
-
-        .stats-comparison {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-        }
-
-        .athlete-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            text-align: center;
-            min-width: 200px;
-            position: relative;
-            transition: transform 0.3s ease;
-        }
-
-        .athlete-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-        }
-
-        .athlete-card h4 {
-            color: var(--primary);
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-        }
-
-        .athlete-card .stats {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
-
-        .athlete-card .outcome {
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        .athlete-card.winner .outcome {
-            color: #10b981;
-        }
-
-        .athlete-card.loser .outcome {
-            color: #ef4444;
-        }
-
-        .problem-points {
-            list-style: none;
-            text-align: left;
-            max-width: 900px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .problem-points li {
-            background: white;
-            padding: 25px;
-            padding-left: 60px;
-            position: relative;
-            font-size: 1.05rem;
-            color: #333;
-            border-radius: 12px;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            border-left: 3px solid transparent;
-        }
-
-        .problem-points li:hover {
-            transform: translateX(5px);
-            box-shadow: 0 5px 25px rgba(0,0,0,0.12);
-            border-left-color: var(--highlight);
-        }
-
-        .problem-points li:before {
-            content: "⚠️";
-            position: absolute;
-            left: 20px;
-            font-size: 1.5rem;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        /* Daily Breakdown */
-        .daily-breakdown {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .day-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            border-top: 4px solid var(--highlight);
-        }
-
-        .day-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-        }
-
-        .day-number {
-            background: var(--highlight);
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .day-card h3 {
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-
-        /* Bio Section */
-        .bio-section {
+            right: -30%;
+            width: 80%;
+            height: 180%;
             background: var(--gradient);
-            color: white;
-            padding: 80px 0;
-        }
-
-        .bio-content {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .bio-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            backdrop-filter: blur(10px);
-        }
-
-        .bio-text {
-            flex: 1;
-            min-width: 300px;
-            text-align: left;
-        }
-
-        .bio-section h2 {
-            color: white;
-            text-align: left;
-        }
-
-        /* Testimonials */
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .testimonial {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-            position: relative;
-        }
-
-        .testimonial:before {
-            content: """;
-            font-size: 4rem;
-            color: var(--highlight);
-            position: absolute;
-            top: -10px;
-            left: 20px;
-            opacity: 0.3;
-        }
-
-        .testimonial-author {
-            margin-top: 20px;
-            font-weight: bold;
-            color: var(--primary);
-        }
-
-        /* Pricing Section */
-        .pricing-section {
-            background: var(--primary);
-            color: white;
-            text-align: center;
-            padding: 100px 0;
-        }
-
-        .pricing-box {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            padding: 50px;
-            border-radius: 20px;
-            max-width: 600px;
-            margin: 0 auto;
-            border: 2px solid rgba(255,255,255,0.2);
-        }
-
-        .pricing-section h2 {
-            color: white;
-        }
-
-        .price {
-            font-size: 4rem;
-            font-weight: bold;
-            color: var(--highlight);
-            margin: 20px 0;
-        }
-
-        .price-strike {
-            text-decoration: line-through;
-            opacity: 0.5;
-            font-size: 2rem;
-            margin-right: 20px;
-        }
-
-        .value-list {
-            list-style: none;
-            text-align: left;
-            margin: 30px 0;
-        }
-
-        .value-list li {
-            padding: 10px 0;
-            padding-left: 30px;
-            position: relative;
-        }
-
-        .value-list li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #4ade80;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        /* FAQ Section */
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            background: white;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-
-        .faq-question {
-            padding: 25px;
-            cursor: pointer;
-            font-weight: bold;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background 0.3s ease;
-        }
-
-        .faq-question:hover {
-            background: #f8f9fa;
-        }
-
-        .faq-answer {
-            padding: 0 25px;
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 300px;
-            padding: 0 25px 25px;
-        }
-
-        .faq-toggle {
-            font-size: 1.5rem;
-            transition: transform 0.3s ease;
-        }
-
-        .faq-item.active .faq-toggle {
+            opacity: 0.05;
             transform: rotate(45deg);
+            z-index: 0;
         }
 
-        /* Guarantee */
-        .guarantee {
-            background: #f0fdf4;
-            border: 2px solid #4ade80;
-            border-radius: 15px;
-            padding: 40px;
-            text-align: center;
-            margin: 50px auto;
-            max-width: 800px;
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
         }
 
-        .guarantee-badge {
-            font-size: 3rem;
-            margin-bottom: 20px;
+        .hero-text {
+            animation: fadeInUp 0.8s ease-out;
         }
 
-        /* Footer */
-        footer {
-            background: var(--primary);
-            color: white;
-            text-align: center;
-            padding: 40px 0;
-        }
-
-        /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -582,28 +84,618 @@
             }
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .badge {
+            display: inline-block;
+            background: var(--gradient);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+            animation: pulse 2s infinite;
         }
 
-        /* Responsive */
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        h1 {
+            font-size: clamp(36px, 5vw, 56px);
+            line-height: 1.1;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .highlight {
+            color: var(--primary);
+            position: relative;
+        }
+
+        .subheadline {
+            font-size: 20px;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        /* Form Section */
+        .form-container {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-header h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .spots-left {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #fee;
+            color: var(--accent);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: pulse-dot 1.5s infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 0.5;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        input {
+            width: 100%;
+            padding: 16px;
+            border: 2px solid #eee;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: var(--bg-light);
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: var(--white);
+        }
+
+        .cta-button {
+            width: 100%;
+            padding: 18px;
+            background: var(--gradient);
+            color: var(--white);
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 102, 255, 0.3);
+        }
+
+        .secure-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 16px;
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        /* Benefits */
+        .benefits {
+            margin: 30px 0;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: start;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .check-icon {
+            width: 24px;
+            height: 24px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .check-icon::after {
+            content: '✓';
+            color: var(--white);
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* Social Proof */
+        .social-proof {
+            background: var(--bg-light);
+            padding: 80px 0;
+        }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .quote-icon {
+            font-size: 48px;
+            color: var(--primary);
+            opacity: 0.2;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .testimonial-text {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .testimonial-role {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* Countdown Timer */
+        .countdown {
+            background: #fee;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 20px 0;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        /* Guarantee */
+        .guarantee {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+        }
+
+        .guarantee-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        /* Curriculum Section */
+        .curriculum {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .days-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .day-card {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .day-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .day-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gradient);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .day-card:hover::before {
+            transform: translateX(0);
+        }
+
+        .day-number {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--primary);
+            opacity: 0.2;
+            margin-bottom: 10px;
+        }
+
+        .day-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .day-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Authority Section */
+        .authority {
+            padding: 80px 0;
+            background: var(--bg-light);
+        }
+
+        .authority-content {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .authority-image {
+            position: relative;
+            background: var(--gradient);
+            height: 400px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .stats-overlay {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+            background: var(--white);
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            animation: slideUp 0.8s ease-out 0.5s both;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .stat {
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .stat:hover {
+            transform: scale(1.05);
+        }
+
+        .stat a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+
+        .stat-number {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-top: 5px;
+            font-family: monospace;
+        }
+
+        .stat a {
+            color: inherit;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            display: block;
+        }
+
+        .stat a:hover {
+            transform: scale(1.05);
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #0066ff;
+            margin-top: 5px;
+            font-weight: 600;
+        }
+
+        .credentials {
+            margin: 20px 0;
+        }
+
+        .credential-item {
+            display: flex;
+            align-items: start;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        /* Bonus Stack */
+        .bonus-stack {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .bonuses {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .bonus-item {
+            display: flex;
+            gap: 20px;
+            padding: 30px;
+            background: var(--bg-light);
+            border-radius: 16px;
+            align-items: start;
+        }
+
+        .bonus-icon {
+            font-size: 40px;
+            flex-shrink: 0;
+        }
+
+        .bonus-content h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .bonus-content p {
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+
+        .bonus-value {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .value-stack {
+            max-width: 500px;
+            margin: 0 auto;
+            background: var(--bg-light);
+            border-radius: 20px;
+            padding: 30px;
+        }
+
+        .value-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .value-total {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+            font-weight: 600;
+            font-size: 18px;
+            border-bottom: 2px solid var(--text-dark);
+        }
+
+        .value-today {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background: var(--bg-light);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+        }
+
+        .faq-item {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 16px;
+        }
+
+        .faq-item h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .faq-item p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Mobile Responsive */
         @media (max-width: 768px) {
-            .bio-content {
-                text-align: center;
-            }
-            
-            .bio-text {
-                text-align: center;
-            }
-            
-            .bio-section h2 {
-                text-align: center;
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
             }
 
-            .daily-breakdown {
+            .form-container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .form-container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .testimonials {
                 grid-template-columns: 1fr;
             }
+
+            .authority-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .authority-image {
+                height: 250px;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .days-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--white);
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .cta-button.loading-state .button-text {
+            display: none;
+        }
+
+        .cta-button.loading-state .loading {
+            display: inline-block;
         }
     </style>
 </head>
@@ -611,452 +703,425 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Unlock Your Athletes' Mental Edge in Just 7 Days—Without Adding Hours to Your Schedule</h1>
-            <p class="subheadline">The Science-Backed Mindset System That Transforms Good Athletes Into Unstoppable Competitors (Even If You've Never Studied Sports Psychology)</p>
-            
-            <div class="countdown">
-                <p>🔥 Limited Time Offer - June Special Pricing</p>
-                <div class="countdown-timer" id="countdown">
-                    <div class="time-unit">
-                        <span id="days">3</span>
-                        <small>Days</small>
-                    </div>
-                    <div class="time-unit">
-                        <span id="hours">14</span>
-                        <small>Hours</small>
-                    </div>
-                    <div class="time-unit">
-                        <span id="minutes">28</span>
-                        <small>Minutes</small>
-                    </div>
-                    <div class="time-unit">
-                        <span id="seconds">47</span>
-                        <small>Seconds</small>
-                    </div>
-                </div>
-            </div>
-            
-            <a href="#pricing" class="cta-button">Enroll Now & Start Building Mental Champions</a>
-        </div>
-    </section>
-
-    <!-- Problem Section -->
-    <section class="section problem-section">
-        <div class="container">
-            <h2>You Already Know the Difference Between Good and GREAT Athletes Isn't Just Physical</h2>
-            
-            <div class="problem-intro">
-                <p style="font-size: clamp(1.1rem, 2vw, 1.3rem); margin-bottom: 30px; font-weight: 500;">
-                    Picture this: Two athletes with identical physical stats.
-                </p>
-                
-                <div class="stats-comparison">
-                    <div class="athlete-card">
-                        <h4>Athlete A</h4>
-                        <div class="stats">
-                            <strong>Elite Physical Stats</strong><br>
-                            <strong>Perfect Technique</strong><br>
-                            <strong>Years of Training</strong><br>
-                            <strong>All the Tools</strong>
-                        </div>
-                        <div class="outcome loser">❌ Chokes When It Matters</div>
-                    </div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="badge">LIMITED JUNE 2025 COHORT</span>
+                    <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px; font-style: italic;">
+                        From Coach Tony Sommers (@toncafitness)
+                    </p>
+                    <h1>
+                        Transform Your Athletes' <span class="highlight">Mental Game</span> 
+                        in Just 7 Days
+                    </h1>
+                    <p class="subheadline">
+                        The proven mindset system elite coaches use to unlock peak performance, 
+                        unshakeable confidence, and championship focus in their athletes.
+                    </p>
                     
-                    <div class="athlete-card winner">
-                        <h4>Athlete B</h4>
-                        <div class="stats">
-                            <strong>Elite Physical Stats</strong><br>
-                            <strong>Perfect Technique</strong><br>
-                            <strong>Years of Training</strong><br>
-                            <strong>All the Tools</strong>
+                    <div class="benefits">
+                        <div class="benefit-item">
+                            <div class="check-icon"></div>
+                            <span><strong>Daily 15-minute lessons</strong> that fit your busy coaching schedule</span>
                         </div>
-                        <div class="outcome">✅ Dominates Under Pressure</div>
+                        <div class="benefit-item">
+                            <div class="check-icon"></div>
+                            <span><strong>Learn directly from Tony</strong> - D1 athlete & movement science expert</span>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="check-icon"></div>
+                            <span><strong>Instant implementation</strong> tools you can use tomorrow</span>
+                        </div>
                     </div>
                 </div>
-                
-                <p style="font-size: 1.2rem; text-align: center; color: var(--primary); font-weight: bold;">
-                    What's the difference? Their MINDSET.
-                </p>
+
+                <div class="form-container">
+                    <div class="form-header">
+                        <div class="spots-left">
+                            <div class="pulse-dot"></div>
+                            Only 47 Spots Left With Tony
+                        </div>
+                        <h2>Secure Your Spot Now</h2>
+                        <p style="color: var(--text-light); font-size: 16px;">
+                            Work directly with Tony Sommers to transform your athletes' mental game
+                        </p>
+                    </div>
+
+                    <form id="challengeForm">
+                        <div class="form-group">
+                            <label for="first_name">First Name</label>
+                            <input type="text" id="first_name" name="first_name" required placeholder="John">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+
+                        <div class="countdown" id="countdown">
+                            🔥 Tony's Early Bird Pricing Ends in 23:47:12
+                        </div>
+
+                        <button type="submit" class="cta-button">
+                            <span class="button-text">Work With Tony for $97</span>
+                            <div class="loading"></div>
+                        </button>
+
+                        <div class="secure-badge">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                            </svg>
+                            Secure checkout • Work directly with Tony • 14-day guarantee
+                        </div>
+                    </form>
+                </div>
             </div>
-            
-            <p style="font-weight: bold; font-size: 1.3rem; margin-bottom: 30px; color: #1a1a1a; text-align: center;">As a coach, you've seen it countless times:</p>
-            
-            <ul class="problem-points">
-                <li>The talented athlete who freezes during crucial moments</li>
-                <li>The physically gifted player who can't bounce back from setbacks</li>
-                <li>The star performer in practice who disappears in competition</li>
-                <li>The athlete with all the tools but none of the mental toughness</li>
-            </ul>
-            
-        .brutal-truth {
-            background: linear-gradient(135deg, #ff4757, #ff6348);
-            color: white;
-            padding: 40px;
-            border-radius: 20px;
-            margin-top: 50px;
-            text-align: center;
-            box-shadow: 0 15px 40px rgba(255, 71, 87, 0.3);
-            position: relative;
-            overflow: hidden;
-            transform: scale(1.02);
-        }
-
-        .brutal-truth::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
-            animation: rotate 20s linear infinite;
-        }
-
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        .brutal-truth p {
-            position: relative;
-            z-index: 1;
-            font-size: 1.3rem;
-            font-weight: bold;
-            margin: 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
         </div>
     </section>
 
-    <!-- Solution Section -->
-    <section class="section">
+    <!-- What's Inside Section -->
+    <section class="curriculum">
         <div class="container">
-            <h2>Introducing the 7-Day Athlete Mindset Tune-Up Challenge</h2>
-            
-            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 40px;">
-                This isn't another generic "think positive" program. It's a proven, science-backed approach 
-                to mental performance designed specifically for busy coaches who need real results.
+            <h2 style="text-align: center; font-size: 36px; margin-bottom: 20px;">
+                7 Days to <span class="highlight">Mental Mastery</span>
+            </h2>
+            <p style="text-align: center; color: var(--text-light); font-size: 18px; margin-bottom: 40px;">
+                Each day unlocks a new mental performance system your athletes can use immediately
             </p>
             
-            <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto;">
-                Created by Nexus, a former Division 1 athlete with a Master's in Movement Science who's obsessed with 
-                making mental training practical and effective.
-            </p>
-            
-            <p style="font-size: 1.3rem; font-weight: bold; margin-top: 40px; color: var(--highlight);">
-                In just 15-20 minutes per day for one week, you'll gain the exact mental training tools 
-                that separate championship programs from everyone else.
-            </p>
-        </div>
-    </section>
-
-    <!-- Daily Breakdown Section -->
-    <section class="section" style="background: #f8f9fa;">
-        <div class="container">
-            <h2>Your 7-Day Transformation Journey</h2>
-            
-            <div class="daily-breakdown">
+            <div class="days-grid">
                 <div class="day-card">
-                    <div class="day-number">1</div>
-                    <h3>The Champion's Clarity Method</h3>
-                    <p>Master the goal-setting framework that creates obsessed athletes (Hint: It's not SMART goals—it's the system I used to go from walk-on to starter)</p>
+                    <div class="day-number">01</div>
+                    <h3>The Champion's Clarity Framework</h3>
+                    <p>Transform fuzzy goals into laser-focused targets that pull your athletes forward</p>
                 </div>
-                
                 <div class="day-card">
-                    <div class="day-number">2</div>
-                    <h3>The Pressure Proof Protocol</h3>
-                    <p>Install the pre-competition routine that turns nervous energy into explosive performance (The same method used by Olympic athletes)</p>
+                    <div class="day-number">02</div>
+                    <h3>The Pressure Protocol</h3>
+                    <p>Build athletes who get better (not bitter) when the stakes are highest</p>
                 </div>
-                
                 <div class="day-card">
-                    <div class="day-number">3</div>
-                    <h3>The Resilience Reset</h3>
-                    <p>Transform setbacks into comebacks with the 3-step recovery system that builds mentally unbreakable athletes</p>
+                    <div class="day-number">03</div>
+                    <h3>The 4R Reset System</h3>
+                    <p>Bounce back from mistakes in under 60 seconds using neuroscience-backed techniques</p>
                 </div>
-                
                 <div class="day-card">
-                    <div class="day-number">4</div>
-                    <h3>The Focus Formula</h3>
-                    <p>Eliminate distractions and create laser-focused athletes using neuroscience-backed attention training techniques</p>
+                    <div class="day-number">04</div>
+                    <h3>Pre-Game Mental Activation</h3>
+                    <p>The 5-minute routine that switches athletes from nervous to "nervicited"</p>
                 </div>
-                
                 <div class="day-card">
-                    <div class="day-number">5</div>
-                    <h3>The Confidence Code</h3>
-                    <p>Build bulletproof self-belief using evidence-based strategies (even in athletes who've been struggling)</p>
+                    <div class="day-number">05</div>
+                    <h3>The Confidence Compound</h3>
+                    <p>Stack small wins into unshakeable self-belief using the momentum method</p>
                 </div>
-                
                 <div class="day-card">
-                    <div class="day-number">6</div>
-                    <h3>The Team Chemistry Catalyst</h3>
-                    <p>Create an unstoppable team culture using peer-to-peer mindset accountability systems</p>
+                    <div class="day-number">06</div>
+                    <h3>Team Chemistry Catalyst</h3>
+                    <p>Transform individual talent into collective dominance with trust protocols</p>
                 </div>
-                
                 <div class="day-card">
-                    <div class="day-number">7</div>
-                    <h3>The Integration Blueprint</h3>
-                    <p>Seamlessly weave mental training into your existing program without adding extra sessions</p>
+                    <div class="day-number">07</div>
+                    <h3>The Legacy Mindset</h3>
+                    <p>Create self-coaching athletes who elevate long after you're gone</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Who Is This For Section -->
-    <section class="section">
+    <!-- Authority Section -->
+    <section class="authority">
         <div class="container">
-            <h2>Is This Challenge Right For You?</h2>
-            
-            <div style="max-width: 800px; margin: 0 auto; text-align: left;">
-                <p style="font-size: 1.2rem; margin-bottom: 30px;"><strong>This Challenge is PERFECT for you if:</strong></p>
-                <ul style="font-size: 1.1rem; line-height: 2;">
-                    <li>✓ You're a strength and conditioning coach who wants to develop complete athletes</li>
-                    <li>✓ You work with competitive athletes at any level</li>
-                    <li>✓ You've noticed mental barriers holding your athletes back</li>
-                    <li>✓ You want practical tools you can use immediately</li>
-                    <li>✓ You believe mindset training is important but don't know where to start</li>
-                    <li>✓ You're ready to become the coach athletes remember for life</li>
-                </ul>
-                
-                <p style="font-size: 1.2rem; margin: 40px 0 30px;"><strong>This is NOT for you if:</strong></p>
-                <ul style="font-size: 1.1rem; line-height: 2;">
-                    <li>✗ You think physical training is all that matters</li>
-                    <li>✗ You're looking for a magic pill or overnight transformation</li>
-                    <li>✗ You're not willing to invest 15-20 minutes daily for a week</li>
-                    <li>✗ You work only with recreational fitness clients</li>
-                    <li>✗ You're satisfied with your athletes' current mental performance</li>
-                </ul>
+            <div class="authority-content">
+                <div class="authority-image">
+                    <div class="stats-overlay">
+                        <div class="stat">
+                            <a href="https://tiktok.com/@toncafitness" target="_blank" style="text-decoration: none; color: inherit;">
+                                <div class="stat-number">120K</div>
+                                <div class="stat-label">@toncafitness</div>
+                            </a>
+                        </div>
+                        <div class="stat">
+                            <a href="https://instagram.com/tonysommers.coach" target="_blank" style="text-decoration: none; color: inherit;">
+                                <div class="stat-number">6K</div>
+                                <div class="stat-label">@tonysommers.coach</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="authority-text">
+                    <h2>Meet Your Instructor: <span class="highlight">Tony Sommers</span></h2>
+                    <div class="credentials">
+                        <div class="credential-item">
+                            <div class="check-icon"></div>
+                            <span><strong>Former D1 Athlete</strong> who's been in the trenches</span>
+                        </div>
+                        <div class="credential-item">
+                            <div class="check-icon"></div>
+                            <span><strong>M.S. Movement Science</strong> - University of Michigan</span>
+                        </div>
+                        <div class="credential-item">
+                            <div class="check-icon"></div>
+                            <span><strong>Lecturer at Cal State San Marcos</strong> - Teaching future coaches</span>
+                        </div>
+                        <div class="credential-item">
+                            <div class="check-icon"></div>
+                            <span><strong>126,000+ followers</strong> trust my performance content</span>
+                        </div>
+                    </div>
+                    <p style="margin-top: 20px; line-height: 1.8; color: var(--text-light);">
+                        After years of watching talented athletes crumble under pressure and coaches struggle with the mental side of performance, I combined my D1 experience, University of Michigan graduate education, and university teaching expertise to create this system. 
+                    </p>
+                    <p style="margin-top: 15px; line-height: 1.8; color: var(--text-light);">
+                        This isn't theory - it's the exact framework I teach future coaches as a lecturer at Cal State San Marcos, now available to you in a practical, implementable format through my Nexus Performance AI platform.
+                    </p>
+                    <div style="margin-top: 30px; padding-top: 30px; border-top: 1px solid #eee;">
+                        <p style="font-size: 14px; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">As Seen On</p>
+                        <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+                            <span style="font-weight: 600; color: var(--text-dark);">📱 TikTok (120K+)</span>
+                            <span style="font-weight: 600; color: var(--text-dark);">📸 Instagram (6K+)</span>
+                            <span style="font-weight: 600; color: var(--text-dark);">🎓 Lecturer - CSUSM</span>
+                            <span style="font-weight: 600; color: var(--text-dark);">🏫 M.S. - Michigan</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Bio Section -->
-    <section class="bio-section">
+    <!-- Bonus Stack Section -->
+    <section class="bonus-stack">
         <div class="container">
-            <div class="bio-content">
-                <div class="bio-image">
-                    🧠💪
+            <h2 style="text-align: center; font-size: 36px; margin-bottom: 40px;">
+                Join Today & Get These <span class="highlight">Performance Multipliers</span>
+            </h2>
+            
+            <div class="bonuses">
+                <div class="bonus-item">
+                    <div class="bonus-icon">🧠</div>
+                    <div class="bonus-content">
+                        <h3>Pre-Competition Mental Checklist</h3>
+                        <p>The exact 10-point system elite athletes use to enter flow state on command</p>
+                        <div class="bonus-value">Value: $47</div>
+                    </div>
                 </div>
-                <div class="bio-text">
-                    <h2>Meet Your Coach</h2>
-                    <h3 style="color: white; margin-bottom: 20px;">Nexus - Where Elite Athletics Meets Cutting-Edge Science</h3>
-                    <p style="margin-bottom: 15px;">Former Division 1 Athlete | Master's in Movement Science | Founder of Nexus Performance AI</p>
-                    <p>I've been where your athletes are. I've felt the crushing weight of championship pressure. 
-                    I've experienced the mental battles that determine who thrives and who merely survives in elite competition.</p>
-                    <p style="margin-top: 15px;">After transitioning from Division 1 athletics to earning my Master's in Movement Science, 
-                    I became obsessed with one question: How can we systematically build mental champions?</p>
-                    <p style="margin-top: 15px;"><strong>This challenge is the answer</strong>—combining real-world athletic experience, 
-                    academic rigor, and cutting-edge performance optimization to give you the exact mental training system I wish every coach had when I was competing.</p>
+                <div class="bonus-item">
+                    <div class="bonus-icon">💪</div>
+                    <div class="bonus-content">
+                        <h3>Emergency Confidence Protocols</h3>
+                        <p>3 breakthrough techniques to rebuild shattered confidence in real-time</p>
+                        <div class="bonus-value">Value: $67</div>
+                    </div>
+                </div>
+                <div class="bonus-item">
+                    <div class="bonus-icon">🏆</div>
+                    <div class="bonus-content">
+                        <h3>Private Coaches Community</h3>
+                        <p>Connect directly with Tony and ambitious coaches implementing these systems worldwide</p>
+                        <div class="bonus-value">Value: $97/month</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="value-stack">
+                <div class="value-item">
+                    <span>7-Day Challenge with Tony Sommers</span>
+                    <span>$197</span>
+                </div>
+                <div class="value-item">
+                    <span>Pre-Competition Checklist</span>
+                    <span>$47</span>
+                </div>
+                <div class="value-item">
+                    <span>Emergency Confidence Protocols</span>
+                    <span>$67</span>
+                </div>
+                <div class="value-item">
+                    <span>Private Community (3 months)</span>
+                    <span>$291</span>
+                </div>
+                <div class="value-total">
+                    <span>Total Value</span>
+                    <span>$602</span>
+                </div>
+                <div class="value-today">
+                    <span>Your Investment Today</span>
+                    <span class="highlight">Just $97</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="section" style="background: #f8f9fa;">
+    <!-- Social Proof Section -->
+    <section class="social-proof">
         <div class="container">
-            <h2>What Coaches Are Saying</h2>
+            <h2 style="text-align: center; font-size: 36px; margin-bottom: 20px;">
+                What Coaches Are <span class="highlight">Saying</span>
+            </h2>
             
-            <div class="testimonial-grid">
+            <div class="testimonials">
                 <div class="testimonial">
-                    <p>"Before Nexus's challenge, I knew mindset mattered but had no system. Now my athletes consistently perform at their peak when it counts. Game changer!"</p>
-                    <p class="testimonial-author">- Coach Marcus T., College Basketball</p>
+                    <span class="quote-icon">"</span>
+                    <p class="testimonial-text">
+                        "Finally, someone who breaks down complex psychology into actual drills we can use. Tony's teaching style is exactly what I needed as a coach."
+                    </p>
+                    <div class="testimonial-author">Mike D.</div>
+                    <div class="testimonial-role">Collegiate Strength Coach</div>
                 </div>
-                
+
                 <div class="testimonial">
-                    <p>"The Focus Formula from Day 4 alone was worth 10x the price. My athletes' concentration during training has skyrocketed."</p>
-                    <p class="testimonial-author">- Sarah K., Track & Field Coach</p>
+                    <span class="quote-icon">"</span>
+                    <p class="testimonial-text">
+                        "I've been following Tony on TikTok for months. The way he explains the science behind performance is unmatched. Can't wait to implement these systems."
+                    </p>
+                    <div class="testimonial-author">Ashley P.</div>
+                    <div class="testimonial-role">Youth Performance Coach</div>
                 </div>
-                
+
                 <div class="testimonial">
-                    <p>"Finally, mental training that isn't 'woo-woo.' Practical, scientific, and my athletes actually buy in. Nexus gets it."</p>
-                    <p class="testimonial-author">- Coach David R., High School Football</p>
+                    <span class="quote-icon">"</span>
+                    <p class="testimonial-text">
+                        "The movement science background shows. This isn't just motivation - it's legitimate sports psychology made practical for real coaches in real situations."
+                    </p>
+                    <div class="testimonial-author">Carlos R.</div>
+                    <div class="testimonial-role">High School S&C Coach</div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Pricing Section -->
-    <section class="pricing-section" id="pricing">
-        <div class="container">
-            <h2>Transform Your Athletes' Mental Game</h2>
-            
-            <div class="pricing-box">
-                <h3 style="font-size: 2rem; margin-bottom: 30px;">Your Complete Mindset Mastery Toolkit</h3>
-                
-                <ul class="value-list">
-                    <li>Daily Coaching Lessons Delivered to Your Inbox</li>
-                    <li>Simple Action Steps You Can Use Immediately</li>
-                    <li>Ready-to-Use Worksheets and Tools</li>
-                    <li>Mental Performance Quick Reference Guide</li>
-                    <li><strong>BONUS:</strong> Pre-Competition Mental Prep Checklist</li>
-                    <li><strong>BONUS:</strong> Access to Our Private Coach Community</li>
-                </ul>
-                
-                <p style="font-size: 1.2rem; margin: 30px 0;">Total Value: <span class="price-strike">Worth Hundreds</span></p>
-                
-                <p style="font-size: 1.5rem;">Your Investment Today:</p>
-                <div class="price">Just $97</div>
-                
-                <p style="font-size: 1.1rem; color: #fbbf24; margin-bottom: 30px;">
-                    🔥 Special June Launch Price
-                </p>
-                
-                <a href="#" class="cta-button" onclick="alert('Enrollment form would open here')">ENROLL NOW & START BUILDING MENTAL CHAMPIONS</a>
-                
-                <p style="margin-top: 30px; font-size: 1.1rem;">
-                    <strong>🎁 June Special Bonus:</strong> Early enrollees get a personal implementation call with Nexus
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Guarantee Section -->
-    <section class="section">
-        <div class="container">
             <div class="guarantee">
-                <div class="guarantee-badge">🛡️</div>
-                <h2 style="color: var(--primary);">Your Success is Guaranteed</h2>
-                <p style="font-size: 1.1rem;">
-                    Try the entire 7-Day Challenge risk-free. If you don't feel equipped with valuable mental training tools by Day 7, 
-                    just email us within 14 days for a full refund. No questions asked.
-                </p>
-                <p style="font-weight: bold; margin-top: 20px;">
-                    That's how confident I am that this will transform how you coach.
-                </p>
+                <div class="guarantee-badge">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="var(--primary)" stroke="none">
+                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                    </svg>
+                    <div>
+                        <strong style="font-size: 18px;">100% Risk-Free Guarantee</strong><br>
+                        <span style="color: var(--text-light); font-weight: 400;">
+                            Try the full challenge for 14 days. Not satisfied? Get a full refund, no questions asked.
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section class="section" style="background: #f8f9fa;">
+    <section class="faq">
         <div class="container">
-            <h2>Frequently Asked Questions</h2>
+            <h2 style="text-align: center; font-size: 36px; margin-bottom: 40px;">
+                Got Questions? <span class="highlight">We've Got Answers</span>
+            </h2>
             
-            <div class="faq-container">
+            <div class="faq-grid">
                 <div class="faq-item">
-                    <div class="faq-question">
-                        How much time does this really take?
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Each daily lesson takes about 15-20 minutes to read and apply. The action steps fit right into your existing training sessions.</p>
-                    </div>
+                    <h3>I'm slammed with practices. Do I have time for this?</h3>
+                    <p>Each daily lesson takes just 15 minutes to consume and includes implementation strategies you can use immediately in your next practice. No extra sessions needed.</p>
                 </div>
-                
                 <div class="faq-item">
-                    <div class="faq-question">
-                        What if I miss a day?
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>No problem! All content is delivered via email and yours to keep forever. Work through it at your own pace.</p>
-                    </div>
+                    <h3>Will this work for youth athletes?</h3>
+                    <p>Absolutely. Every technique is scalable from youth to elite levels. You'll learn how to adapt the language and complexity for your specific athletes.</p>
                 </div>
-                
                 <div class="faq-item">
-                    <div class="faq-question">
-                        Is this appropriate for youth athletes?
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Absolutely. The principles work for any competitive level. You'll learn how to adapt them for your specific athletes.</p>
-                    </div>
+                    <h3>What if I miss a day?</h3>
+                    <p>You get lifetime access to all materials. Take it at your own pace, revisit lessons anytime, and implement when it works for your schedule.</p>
                 </div>
-                
                 <div class="faq-item">
-                    <div class="faq-question">
-                        Do I need any psychology background?
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Not at all. Everything is explained in coach-friendly language with practical examples.</p>
-                    </div>
+                    <h3>I'm not great with "psychology stuff." Is this too complex?</h3>
+                    <p>That's exactly why I created this - to translate complex sports psychology into simple, practical tools any coach can use. I break everything down the same way I did for my university students. No psych degree required!</p>
                 </div>
-                
                 <div class="faq-item">
-                    <div class="faq-question">
-                        When does the challenge start?
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>The June group begins Monday, June 9th, 2025. You'll receive your Day 1 lesson that morning.</p>
-                    </div>
+                    <h3>How is this different from other mental training?</h3>
+                    <p>This isn't meditation apps or motivational quotes. It's my practical, science-based system designed specifically for coaches to implement with athletes. You're learning directly from me through my Nexus Performance AI platform.</p>
                 </div>
-                
                 <div class="faq-item">
-                    <div class="faq-question">
-                        Can I share this with my coaching staff?
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Each enrollment is for one coach, but you're encouraged to use the strategies with your entire team and coaching staff.</p>
-                    </div>
+                    <h3>What if it doesn't work for my athletes?</h3>
+                    <p>You're protected by our 14-day guarantee. Try the entire challenge, implement the strategies, and if you don't see improvement, get a full refund.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Final CTA Section -->
-    <section class="section" style="background: var(--secondary); color: white; text-align: center;">
+    <section class="final-cta" style="padding: 80px 0; background: var(--gradient); text-align: center;">
         <div class="container">
-            <h2 style="color: white;">Your Athletes Are Counting On You</h2>
-            <p style="font-size: 1.3rem; margin-bottom: 40px;">
-                Don't let another season pass without giving them the mental edge they deserve.
+            <h2 style="color: white; font-size: 36px; margin-bottom: 20px;">
+                Your Athletes Deserve a Coach Who Understands the Mental Game
+            </h2>
+            <p style="color: white; font-size: 20px; margin-bottom: 30px; opacity: 0.9;">
+                Join 126,000+ coaches who trust Tony Sommers to elevate their coaching
             </p>
-            <a href="#pricing" class="cta-button">JOIN THE JUNE COHORT NOW</a>
-            <p style="margin-top: 20px;">Enrollment closes June 7th</p>
+            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+                    style="background: white; color: var(--primary); padding: 18px 40px; 
+                           border: none; border-radius: 10px; font-size: 18px; 
+                           font-weight: 700; cursor: pointer;">
+                Work With Tony Now →
+            </button>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer style="padding: 30px 0; background: #f5f5f5; text-align: center;">
         <div class="container">
-            <p>&copy; 2025 Nexus Performance AI. All rights reserved.</p>
-            <p style="margin-top: 10px; opacity: 0.8;">Questions? Email us at support (at) nexusperformanceai.com</p>
+            <p style="color: var(--text-light); font-size: 14px;">
+                © 2025 Tony Sommers | Powered by Nexus Performance AI | 
+                <a href="#" style="color: var(--text-light); text-decoration: underline;">Privacy</a> | 
+                <a href="#" style="color: var(--text-light); text-decoration: underline;">Terms</a>
+            </p>
         </div>
     </footer>
 
     <script>
-        // FAQ Accordion
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const faqItem = question.parentElement;
-                faqItem.classList.toggle('active');
-            });
-        });
-
         // Countdown Timer
         function updateCountdown() {
-            const endDate = new Date('June 7, 2025 23:59:59').getTime();
-            const now = new Date().getTime();
-            const distance = endDate - now;
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById('days').textContent = days;
-            document.getElementById('hours').textContent = hours;
-            document.getElementById('minutes').textContent = minutes;
-            document.getElementById('seconds').textContent = seconds;
-
-            if (distance < 0) {
-                document.getElementById('countdown').innerHTML = '<p style="font-size: 1.5rem;">Enrollment Closed</p>';
-            }
+            const now = new Date();
+            const midnight = new Date();
+            midnight.setHours(24, 0, 0, 0);
+            
+            const diff = midnight - now;
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown').innerHTML = 
+                `🔥 Tony's Early Bird Pricing Ends in ${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
         }
 
         setInterval(updateCountdown, 1000);
         updateCountdown();
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+        // Form Submission
+        document.getElementById('challengeForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const button = this.querySelector('.cta-button');
+            button.classList.add('loading-state');
+            
+            // Get form values
+            const firstName = document.getElementById('first_name').value;
+            const email = document.getElementById('email').value;
+            
+            // Direct to ConvertKit Commerce checkout
+            // Your actual ConvertKit Commerce product URL
+            const checkoutUrl = 'https://trainer-tech-pro.kit.com/products/7-day-athlete-mindset-tune-up';
+            
+            // Add email as parameter to pre-fill checkout
+            window.location.href = `${checkoutUrl}?email=${encodeURIComponent(email)}&first_name=${encodeURIComponent(firstName)}`;
+        });
+
+        // Smooth animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
+                }
             });
+        }, observerOptions);
+
+        document.querySelectorAll('.testimonial').forEach(el => {
+            observer.observe(el);
         });
     </script>
 </body>
